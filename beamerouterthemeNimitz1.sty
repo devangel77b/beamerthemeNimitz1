@@ -3,13 +3,15 @@
 \mode<presentation>
 
 %% headlines
+% for this theme the title author etc are centered and two graphics are placed
+% on either side
 \setbeamertemplate{headline}{
 %\leavevmode
 \begin{beamercolorbox}{headline}
-\begin{minipage}[t][4in][c]{\paperwidth}
+\begin{minipage}[t][4.5in][c]{\paperwidth}
 \begin{columns}[t]
 \begin{column}{0.15\paperwidth}
-\includegraphics[height=5in,valign=t,left]{usna-crest-1.png}
+% reserve space for graphics
 \end{column}
 \begin{column}{0.7\paperwidth}
 \begin{center}
@@ -19,11 +21,20 @@
 \end{center}
 \end{column}
 \begin{column}{0.15\paperwidth}
-\includegraphics[height=5in,valign=t,right]{usna-crest-1.png}
+% reserve space for graphics
+%\includegraphics[height=5in,valign=t,right]{usna-crest-1.png}
 \end{column}
 \end{columns}
 \end{minipage}
 \end{beamercolorbox}
+
+% now use tikz to place the graphics
+\begin{tikzpicture}[remember picture,overlay]
+% left crest
+    \node[xshift=2.5in,yshift=-2.5in] at (current page.north west) {\includegraphics[height=5in]{usna-crest-1.png}};
+    % right crest
+    	\node[xshift=-2.5in,yshift=-2.5in] at (current page.north east) {\includegraphics[height=5in]{usna-crest-1.png}};
+\end{tikzpicture}
 }
 
 %%\leavevmode

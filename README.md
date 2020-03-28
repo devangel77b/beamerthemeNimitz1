@@ -1,2 +1,2 @@
-# wrceposter
-Beamer poster theme etc for USNA Weapons, Robotics, and Control Engineering Dept 
+# beamerthemeNimitz1
+Beamer poster theme based on USNA MSC pattern 1 (blue top, two full color crests).
